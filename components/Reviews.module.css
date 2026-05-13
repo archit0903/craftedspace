@@ -1,0 +1,133 @@
+.section {
+  padding: var(--section-pad);
+  background: #F0E8DC;
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: rgba(107, 76, 48, 0.2);
+}
+
+.header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.title {
+  font-size: clamp(28px, 3.5vw, 44px);
+  color: var(--walnut);
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.aggregate {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--walnut);
+  padding: 16px 24px;
+}
+
+.aggScore {
+  font-family: var(--font-display);
+  font-size: 44px;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.aggCount {
+  font-size: 12px;
+  color: var(--birch);
+  margin-top: 4px;
+  letter-spacing: 0.5px;
+}
+
+/* Stars */
+.stars { display: flex; gap: 2px; margin-bottom: 14px; }
+.starFilled { color: var(--gold); font-size: 15px; }
+.starEmpty  { color: rgba(107, 76, 48, 0.3); font-size: 15px; }
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  padding: 28px 24px;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.card:hover {
+  border-bottom-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(44, 26, 14, 0.1);
+}
+
+.quote {
+  font-family: var(--font-display);
+  font-size: 15px;
+  color: var(--cedar);
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(107, 76, 48, 0.1);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--walnut);
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.reviewerName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--walnut);
+}
+
+.reviewerMeta {
+  font-size: 11px;
+  color: var(--cedar);
+  letter-spacing: 0.3px;
+  margin-top: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 580px) {
+  .grid { grid-template-columns: 1fr; }
+  .aggregate { padding: 12px 16px; }
+  .aggScore { font-size: 36px; }
+}

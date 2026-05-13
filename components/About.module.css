@@ -1,0 +1,169 @@
+.section {
+  padding: var(--section-pad);
+  background: var(--cream);
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+/* Left column */
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: sticky;
+  top: 100px;
+}
+
+.photoFrame {
+  position: relative;
+  background: var(--walnut-light);
+  height: 400px;
+  overflow: hidden;
+}
+
+.photoFrame::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gold);
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: rgba(212,168,83,0.4);
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* NOTE: Replace .photoPlaceholder with <Image src="/owner.jpg" ... fill alt="Owner name" /> */
+
+.photoCorner {
+  position: absolute;
+  bottom: -1px; right: -1px;
+  width: 60px; height: 60px;
+  background: var(--cream);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+}
+
+.qualityBox {
+  background: var(--walnut);
+  padding: 28px 32px;
+  border-left: 3px solid var(--gold);
+}
+
+.qbNum {
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.qbLabel {
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--cream);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.qbDesc {
+  font-size: 13px;
+  color: var(--birch);
+  line-height: 1.75;
+}
+
+/* Right column */
+.right { padding-top: 8px; }
+
+.title {
+  font-size: clamp(28px, 3.5vw, 42px);
+  color: var(--walnut);
+  font-weight: 400;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hook {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--cedar);
+  font-style: italic;
+  padding: 14px 20px;
+  border-left: 3px solid var(--gold);
+  background: rgba(212, 168, 83, 0.06);
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.body p {
+  font-size: 15px;
+  color: var(--cedar);
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+.values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.valueChip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid rgba(107, 76, 48, 0.2);
+  padding: 8px 16px;
+  font-size: 13px;
+  color: var(--walnut);
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .left {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .photoFrame {
+    flex: 1;
+    min-width: 240px;
+    height: 300px;
+  }
+  .qualityBox { flex: 1; min-width: 200px; }
+}
+
+@media (max-width: 580px) {
+  .left { flex-direction: column; }
+  .photoFrame { height: 260px; }
+}
