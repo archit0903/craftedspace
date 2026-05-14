@@ -62,28 +62,14 @@
 
 .item:hover .itemInner { transform: scale(1.01); }
 .item:hover .overlay { opacity: 1; }
-.item:hover .imgPlaceholder { opacity: 0.4; }
-
-.imgPlaceholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  transition: opacity 0.3s;
-  opacity: 0.6;
+.photo {
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.imgPlaceholder span {
-  font-size: 11px;
-  color: rgba(212, 168, 83, 0.4);
-  letter-spacing: 1px;
-  text-transform: uppercase;
+.item:hover .photo {
+  transform: scale(1.05);
 }
-
-/* NOTE: Replace .imgPlaceholder with a real <Image /> from next/image when you add photos */
 
 .overlay {
   position: absolute;

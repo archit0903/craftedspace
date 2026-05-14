@@ -1,56 +1,55 @@
+import Image from "next/image";
 import styles from "./Work.module.css";
 
 const PROJECTS = [
   {
-    title: "Oakville Kitchen Renovation",
+    title: "Commercial Base Cabinet Suite",
     category: "Custom Cabinets",
-    year: "2024",
-    detail: "Full shaker-style cabinet suite in white oak",
+    year: "2025",
+    detail: "Full wall of base cabinets with integrated drawers — commercial office fit-out",
     size: "large",
+    img: "/projects/IMG_3914.jpeg",
   },
   {
-    title: "Burlington Walk-In Pantry",
-    category: "Pantry Systems",
-    year: "2024",
-    detail: "Floor-to-ceiling pantry with pull-outs",
-    size: "medium",
-  },
-  {
-    title: "Hamilton Whole-Home Assembly",
+    title: "L-Shaped Corner Desk",
     category: "Flat-Pack Assembly",
-    year: "2024",
-    detail: "3-bedroom home, 24 flat-pack items",
+    year: "2025",
+    detail: "Corner workstation assembled and levelled in a new office space",
     size: "medium",
+    img: "/projects/IMG_3627.jpeg",
   },
   {
-    title: "Antique Dining Table Restoration",
-    category: "Furniture Repair",
-    year: "2023",
-    detail: "Full strip, repair, and hand-rubbed finish",
-    size: "small",
+    title: "Gaming Desk with LED Riser",
+    category: "Flat-Pack Assembly",
+    year: "2025",
+    detail: "Full gaming desk build with monitor riser and integrated LED lighting",
+    size: "medium",
+    img: "/projects/IMG_4005.jpeg",
   },
   {
-    title: "Ancaster Laundry Cabinets",
-    category: "Custom Cabinets",
-    year: "2023",
-    detail: "Utility cabinetry with folding counter",
+    title: "Tall Walnut Storage Cabinet",
+    category: "Flat-Pack Assembly",
+    year: "2025",
+    detail: "Floor-to-ceiling storage tower with open shelving and lower door",
     size: "small",
+    img: "/projects/IMG_3898.jpeg",
   },
   {
-    title: "Home Office Built-Ins",
-    category: "Woodwork",
-    year: "2023",
-    detail: "Wall-to-wall bookshelves & desk unit",
+    title: "Bedroom Nightstand Set",
+    category: "Flat-Pack Assembly",
+    year: "2025",
+    detail: "Matching pair of bedside tables assembled and positioned",
     size: "small",
+    img: "/projects/IMG_3893.jpeg",
   },
 ];
 
 const CATEGORY_COLORS: Record<string, string> = {
-  "Custom Cabinets":      "#D4A853",
-  "Pantry Systems":       "#8B6540",
-  "Flat-Pack Assembly":   "#6B8B6B",
-  "Furniture Repair":     "#8B6B4A",
-  "Woodwork":             "#A07550",
+  "Custom Cabinets":    "#D4A853",
+  "Pantry Systems":     "#8B6540",
+  "Flat-Pack Assembly": "#6B8B6B",
+  "Furniture Repair":   "#8B6B4A",
+  "Woodwork":           "#A07550",
 };
 
 export default function Work() {
@@ -69,20 +68,17 @@ export default function Work() {
         </div>
 
         <div className={styles.grid}>
-          {PROJECTS.map((p, i) => (
+          {PROJECTS.map((p) => (
             <div key={p.title} className={`${styles.item} ${styles[p.size]}`}>
               <div className={styles.itemInner}>
-                {/* Placeholder for real photo */}
-                <div className={styles.imgPlaceholder} aria-hidden="true">
-                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                    <rect x="8" y="8" width="14" height="22" rx="2" fill="rgba(212,168,83,0.3)" stroke="rgba(212,168,83,0.5)" strokeWidth="1"/>
-                    <rect x="26" y="8" width="14" height="22" rx="2" fill="rgba(212,168,83,0.3)" stroke="rgba(212,168,83,0.5)" strokeWidth="1"/>
-                    <rect x="8" y="32" width="32" height="9" rx="2" fill="rgba(212,168,83,0.3)" stroke="rgba(212,168,83,0.5)" strokeWidth="1"/>
-                    <circle cx="15" cy="19" r="2" fill="rgba(212,168,83,0.6)"/>
-                    <circle cx="33" cy="19" r="2" fill="rgba(212,168,83,0.6)"/>
-                  </svg>
-                  <span>Photo coming soon</span>
-                </div>
+                <Image
+                  src={p.img}
+                  alt={p.title}
+                  fill
+                  sizes="(max-width: 580px) 100vw, (max-width: 900px) 50vw, 33vw"
+                  className={styles.photo}
+                  style={{ objectFit: "cover" }}
+                />
 
                 <div className={styles.overlay}>
                   <div

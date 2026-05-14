@@ -23,12 +23,15 @@ export default function Contact() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // TODO: connect to your preferred email API (e.g. Resend, Formspree, Nodemailer)
-    console.log("Form submitted:", form);
-    setSubmitted(true);
-  };
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  const res = await fetch("https://formspree.io/f/xjglqyzp", {  // ← your endpoint
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(form),
+  });
+  if (res.ok) setSubmitted(true);
+};
 
   return (
     <section className={styles.section} id="contact">
