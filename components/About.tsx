@@ -14,7 +14,7 @@ export default function About() {
                   <circle cx="40" cy="30" r="18" stroke="rgba(212,168,83,0.4)" strokeWidth="1.5"/>
                   <path d="M12 70c0-15.464 12.536-28 28-28s28 12.536 28 28" stroke="rgba(212,168,83,0.4)" strokeWidth="1.5"/>
                 </svg>
-                <p>Add your photo here</p>
+                <p></p>
               </div>
               <div className={styles.photoCorner} aria-hidden="true" />
             </div>
