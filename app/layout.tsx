@@ -28,6 +28,9 @@ export const metadata: Metadata = {
     description: "It's all about your vision and our craft.",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
