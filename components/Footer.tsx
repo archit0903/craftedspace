@@ -25,7 +25,7 @@ export default function Footer() {
               <span>CraftedSpace</span>
             </div>
             <p className={styles.tagline}>"It's all about your vision and our craft."</p>
-            <p className={styles.address}>Burlington, Ontario · Serving the GTA</p>
+            <p className={styles.address}>Hamilton, Ontario · Serving the GTA</p>
           </div>
 
           <nav className={styles.nav} aria-label="Footer navigation">
