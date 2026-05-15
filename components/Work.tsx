@@ -116,7 +116,7 @@ const PROJECTS = [
     year: "2025",
     detail: "Full wall of base cabinets with integrated drawers — commercial office fit-out",
     size: "large",
-    img: "/projects/IMG_3914.jpeg",
+    img: "/projects/IMG_3914.webp",
     priority: true,
   },
   {
@@ -125,7 +125,7 @@ const PROJECTS = [
     year: "2025",
     detail: "Corner workstation assembled and levelled in a new office space",
     size: "medium",
-    img: "/projects/IMG_3627.jpeg",
+    img: "/projects/IMG_3627.webp",
     priority: false,
   },
   {
@@ -134,7 +134,7 @@ const PROJECTS = [
     year: "2025",
     detail: "Full gaming desk build with monitor riser and integrated LED lighting",
     size: "medium",
-    img: "/projects/IMG_4005.jpeg",
+    img: "/projects/IMG_4005.webp",
     priority: false,
   },
   {
@@ -143,7 +143,7 @@ const PROJECTS = [
     year: "2025",
     detail: "Floor-to-ceiling storage tower with open shelving and lower door",
     size: "small",
-    img: "/projects/IMG_3898.jpeg",
+    img: "/projects/IMG_3898.webp",
     priority: false,
   },
   {
@@ -152,7 +152,7 @@ const PROJECTS = [
     year: "2025",
     detail: "Matching pair of bedside tables assembled and positioned",
     size: "small",
-    img: "/projects/IMG_3893.jpeg",
+    img: "/projects/IMG_3893.webp",
     priority: false,
   },
 ];
@@ -165,7 +165,7 @@ const CATEGORY_COLORS: Record<string, string> = {
   "Woodwork":           "#A07550",
 };
 
-// Warm walnut-toned blur placeholder (shows instantly while image loads)
+
 const BLUR_PLACEHOLDER =
   "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/wAAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAMF/8QAIRAAAQMEAgMAAAAAAAAAAAAAAQIDBAARBRIhMUH/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8Amss2jXO5x7bbm城 城城城城城城城城城城城城城城城城城城城/9k=";
 
