@@ -38,7 +38,7 @@ export default function Footer() {
           <div className={styles.contact}>
             <div className={styles.navLabel}>Contact</div>
             <a href="tel:+19055551234">(905) 516 7432</a>
-            <a href="mailto:gabhi5655@gmail.com">gabhi5655@gmail.com</a>
+            <a href="mailto:gabhi5655@gmail.com">craftedspaceinfo@gmail.com</a>
             <div className={styles.hours}>
               <span>Mon – Fri: 8am – 6pm</span>
               <span>Sat: 9am – 4pm</span>
