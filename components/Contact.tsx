@@ -57,7 +57,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className={styles.methodLabel}>Call or Text</div>
-                  <div className={styles.methodValue}>(905) 555-1234</div>
+                  <div className={styles.methodValue}>(905) 516 7432</div>
                 </div>
               </a>
 
