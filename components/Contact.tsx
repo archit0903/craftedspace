@@ -25,7 +25,7 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
-  const res = await fetch("https://formspree.io/f/xjglqyzp", {  // ← your endpoint
+  const res = await fetch("https://formspree.io/f/mwvydnyk", { //endpoint
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(form),
@@ -70,7 +70,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className={styles.methodLabel}>Email</div>
-                  <div className={styles.methodValue}>gabhi5655@gmail.com</div>
+                  <div className={styles.methodValue}>craftedspaceinfo@gmail.com</div>
                 </div>
               </a>
 
