@@ -18,11 +18,11 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "CraftedSpace | Custom Cabinets & Woodwork · Burlington, ON",
+  title: "CraftedSpace | Custom Cabinets & Woodwork · Hamilton, ON",
   description:
     "Custom kitchen cabinets, pantries, furniture repair, woodwork, and flat-pack assembly. Serving Burlington, Oakville, Hamilton & the GTA. It's all about your vision and our craft.",
   keywords:
-    "custom cabinets Burlington, kitchen cabinets Ontario, furniture assembly GTA, woodwork Burlington, pantry installation, furniture repair",
+    "custom cabinets Hamilton, kitchen cabinets Ontario, furniture assembly GTA, woodwork Hamilton Burlington, pantry installation, furniture repair",
   openGraph: {
     title: "CraftedSpace | Custom Cabinets & Woodwork",
     description: "It's all about your vision and our craft.",
